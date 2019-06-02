@@ -23,8 +23,22 @@ function genNum(min, max){
     return Math.floor(Math.random() * (max - min) + (min))
 }
 
-
     $('#gem1').on('click', function(){
+        var score = parseInt($('#score').html());
+        score += parseInt($(this).html());
+        $('#score').html(score);
+    });
+    $('#gem2').on('click', function(){
+        var score = parseInt($('#score').html());
+        score += parseInt($(this).html());
+        $('#score').html(score);
+    });
+    $('#gem3').on('click', function(){
+        var score = parseInt($('#score').html());
+        score += parseInt($(this).html());
+        $('#score').html(score);
+    });
+    $('#gem4').on('click', function(){
         var score = parseInt($('#score').html());
         score += parseInt($(this).html());
         $('#score').html(score);
