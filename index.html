@@ -10,30 +10,31 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet/css" href="assets/css/style.css">
-    <link rel="stylesheet/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet/css" href="assets/css/reset.css"> -->
 </head>
 
-<body>
+<body class="bg-custom">
 
-    <div class="jumbotron jumbotron-fluid">
-        <h1 class="text-center">Crystal Collector</h1>
-        <p class="lead"></p>
-        <hr class="my-4">
+    <!-- Top of page -->
+    <div class="jumbotron jumbotron-fluid bg-info">
+        <h1 class="text-center text-bold text-dark">Crystal Collector</h1>
     </div>
 
     <!-- Score Card -->
-    <div class="container">
-        
+    <div class="container py-4">
+
         <div class="row">
-            <div class="col-md-3">
-                <div class="card card-body bg-dark text-white">
-                    <h4>Value: <span id="target"></span></h4>
-                    <hr>
-                    <h4>Wins:&nbsp; <span id="wins"> </span></h4>
-                    <hr>
-                    <h4>Losses:&nbsp; <span id="losses"> </span>
-                    </h4>
+            <div class="col text-center">
+                <div class="card-border text-light">
+                    <hr class="border-secondary w-25">
+                    <h1>Target: <span id="target"></span></h1>
+                    <hr class="border-secondary w-25">
+                    <h1>Wins:&nbsp; <span id="wins"> </span></h1>
+                    <hr class="border-secondary w-25">
+                    <h1>Losses:&nbsp; <span id="losses"> </span>
+                    </h1>
+                    <hr class="border-secondary w-25">
                 </div>
             </div>
         </div>
@@ -44,21 +45,20 @@
 
         <!-- Your Score -->
         <div class="row">
-            <div class="col-md-3">
-                <div class="card card-body bg-dark text-white">
-                    <h4 class="card-title">Your Score:&nbsp; <span id="score"></span></h4>
-                </div>
+            <div class="col text-center text-success">
+
+                <h1 class="card-title">Your Score:&nbsp; <span id="score"></span></h1>
+
             </div>
         </div>
         <br>
         <!-- Gem Buttons -->
 
         <div class="text-center">
-            <a name="" id="gem1" class="btn btn-primary" href="#" role="button"></a>
+            <button id="gem1"></button>
             <button id="gem2"></button>
             <button id="gem3"></button>
             <button id="gem4"></button>
-
         </div>
     </div>
 
