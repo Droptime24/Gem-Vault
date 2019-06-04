@@ -2,9 +2,9 @@ body, html {
   height: 100%;
 }
 
-.bg-custom {
+.bg-custom{
   /* The image used */
-  background-image: url('/assets/images/background1.jpeg');
+  background-image: url("/assets/images/background1.jpeg") !important;
 
   /* Full height */
   height: 100%;

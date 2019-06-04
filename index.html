@@ -10,63 +10,59 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <!--my css -->
+    <!--my css -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="bg-custom">
+<body>
+    <div class="card card-fluid bg-custom">
 
-    <!-- Top of page -->
-    <div class="jumbotron bg-dark">
-        <h1 class="text-center text-bold text-info">Crystal Collector</h1>
-    </div>
+            <!-- Top of page -->
+            <div class="jumbotron jumbotron-fluid bg-dark">
+                <h1 class="text-center text-bold text-info">Crystal Collector</h1>
+            </div>
 
-    <!-- Score Card -->
-    <div class="container py-4">
+            <!-- Score Card -->
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="card-border text-light">
+                            <hr class="border-secondary w-25">
+                            <h1>Target: <span id="target"></span></h1>
+                            <hr class="border-secondary w-25">
+                            <h1>Wins:&nbsp; <span id="wins"> </span></h1>
+                            <hr class="border-secondary w-25">
+                            <h1>Losses:&nbsp; <span id="losses"> </span>
+                            </h1>
+                            <hr class="border-secondary w-25">
+                        </div>
+                    </div>
+                </div>
 
-        <div class="row">
-            <div class="col text-center">
-                <div class="card-border text-light">
-                    <hr class="border-secondary w-25">
-                    <h1>Target: <span id="target"></span></h1>
-                    <hr class="border-secondary w-25">
-                    <h1>Wins:&nbsp; <span id="wins"> </span></h1>
-                    <hr class="border-secondary w-25">
-                    <h1>Losses:&nbsp; <span id="losses"> </span>
-                    </h1>
-                    <hr class="border-secondary w-25">
+                <!-- Break in Page -->
+                <br>
+                <br>
+
+                <!-- Your Score -->
+                <div class="row">
+                    <div class="col text-center text-success">
+
+                        <h1 class="card-title">Your Score:&nbsp; <span id="score"></span></h1>
+
+                    </div>
+                </div>
+                <br>
+                <!-- Gem Buttons -->
+
+                <div class="text-center">
+                    <button id="gem1"></button>
+                    <button id="gem2"></button>
+                    <button id="gem3"></button>
+                    <button id="gem4"></button>
                 </div>
             </div>
         </div>
-
-        <!-- Break in Page -->
-        <br>
-        <br>
-
-        <!-- Your Score -->
-        <div class="row">
-            <div class="col text-center text-success">
-
-                <h1 class="card-title">Your Score:&nbsp; <span id="score"></span></h1>
-
-            </div>
-        </div>
-        <br>
-        <!-- Gem Buttons -->
-
-        <div class="text-center">
-            <button id="gem1"></button>
-            <button id="gem2"></button>
-            <button id="gem3"></button>
-            <button id="gem4"></button>
-        </div>
     </div>
-
-
-
-    
-    
-    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -77,9 +73,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        <!-- Optional JavaScript -->
-        <script src="assets/javascript/game.js"></script>
-    
+    <!-- Optional JavaScript -->
+    <script src="assets/javascript/game.js"></script>
+
 </body>
 
 </html>
