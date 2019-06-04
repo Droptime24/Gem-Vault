@@ -68,7 +68,6 @@ function youWin() {
     if (score === target) {
         wins++
         $('#wins').html(wins);
-        $('#target').html(target);
         alert("You win!!");
         score = 0;      
         
@@ -79,8 +78,10 @@ function youWin() {
         losses++
         alert("You lose.");
         $('#losses').html(losses);
-        $('#target').html(target);
         score = 0;  
-        
+        $('#target').reset(genNum(19, 120));
     } 
 }
+
+
+
