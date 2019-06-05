@@ -21,28 +21,6 @@ $('.gem0').on('click', function () {
 
 });
 
-// $('#gem2').on('click', function () {
-
-//     score += parseInt($(this).attr("vault"));
-//     ifScore();
-//     $('#score').html(score);
-// });
-
-// $('#gem3').on('click', function () {
-
-//     score += parseInt($(this).attr("vault"));
-//     ifScore();
-//     $('#score').html(score);
-// });
-
-// $('#gem4').on('click', function () {
-
-//     score += parseInt($(this).attr("vault"));
-//     ifScore();
-//     $('#score').html(score);
-// });
-
-// when score reaches the target score increment wins by 1
 function ifScore() {
 
     if (score === target) {
@@ -51,8 +29,6 @@ function ifScore() {
         $('#wins').html(wins);
         resetTarget();
         score = 0; 
-             
-        
     }
 
     // else alert you loose increment losses by 1
@@ -61,11 +37,14 @@ function ifScore() {
         $('#losses').html(losses);
         alert("You lose.");
         resetTarget();
-        score = 0;  
-        
-        
+        score = 0;   
     } 
 };
+$('#reset').on('click', function () {
+    wins = 0;
+    losses = 0;
+    resetTarget()
+});
 
 function resetTarget() {
     // Target score
