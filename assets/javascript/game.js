@@ -5,82 +5,86 @@ var score = 0;
 var target = genNum(19, 120);
 
 
-
-// Target score
-$('#target').html(target);
-
-// Times lost 
-$('#losses').html(losses);
-
-// Times won
-$('#wins').html(wins);
-
-// Score
-$('#score').html(0);
-
-// Gems
-$('#gem1').html(genNum(1, 12));
-$('#gem2').html(genNum(1, 12));
-$('#gem3').html(genNum(1, 12));
-$('#gem4').html(genNum(1, 12));
-
-
-
 // Global random number function
 function genNum(min, max) {
     return Math.floor(Math.random() * (max - min) + (min));
 }
 
 // Assign gem random numbers
-var score = parseInt($('#score').html());
+// var score = parseInt($('#score').html());
 
-$('#gem1').on('click', function () {
-    
-    score += parseInt($(this).html());
-    youWin();
+$('.gem0').on('click', function () {
+
+    score += parseInt($(this).attr("vault"));
     $('#score').html(score);
+    setTimeout(function () { ifScore() })
+
 });
 
-$('#gem2').on('click', function () {
+// $('#gem2').on('click', function () {
 
-    score += parseInt($(this).html());
-    youWin();
-    $('#score').html(score);
-});
+//     score += parseInt($(this).attr("vault"));
+//     ifScore();
+//     $('#score').html(score);
+// });
 
-$('#gem3').on('click', function () {
+// $('#gem3').on('click', function () {
 
-    score += parseInt($(this).html());
-    youWin();
-    $('#score').html(score);
-});
+//     score += parseInt($(this).attr("vault"));
+//     ifScore();
+//     $('#score').html(score);
+// });
 
-$('#gem4').on('click', function () {
+// $('#gem4').on('click', function () {
 
-    score += parseInt($(this).html());
-    youWin();
-    $('#score').html(score);
-});
+//     score += parseInt($(this).attr("vault"));
+//     ifScore();
+//     $('#score').html(score);
+// });
 
 // when score reaches the target score increment wins by 1
-function youWin() {
+function ifScore() {
 
     if (score === target) {
         wins++
-        $('#wins').html(wins);
-        $('#target').html(target);
         alert("You win!!");
-        score = 0;      
+        $('#wins').html(wins);
+        resetTarget();
+        score = 0; 
+             
         
     }
 
     // else alert you loose increment losses by 1
     else if (score > target) {
         losses++
-        alert("You lose.");
         $('#losses').html(losses);
-        $('#target').html(target);
+        alert("You lose.");
+        resetTarget();
         score = 0;  
         
+        
     } 
-}
+};
+
+function resetTarget() {
+    // Target score
+    target = genNum(19, 120);
+    $('#target').html(target);
+    
+    // Times lost 
+    $('#losses').html(losses);
+
+    // Times won
+    $('#wins').html(wins);
+
+    // Score
+    $('#score').html(0);
+
+    $('#gem1').attr("vault", genNum(1, 12));
+    $('#gem2').attr("vault", genNum(1, 12));
+    $('#gem3').attr("vault", genNum(1, 12));
+    $('#gem4').attr("vault", genNum(1, 12));
+
+};
+resetTarget();
