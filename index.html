@@ -11,58 +11,90 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--my css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet"  href="assets/css/style.css">
 </head>
 
 <body>
     <div class="card card-fluid bg-custom">
 
-            <!-- Top of page -->
-            <div class="jumbotron jumbotron-fluid bg-dark">
-                <h1 class="text-center text-bold text-info">Crystal Collector</h1>
-            </div>
-
-            <!-- Score Card -->
-            <div class="container py-4">
-                <div class="row">
-                    <div class="col text-center">
-                        <div class="card-border text-light">
-                            <hr class="border-secondary w-25">
-                            <h1>Target: <span id="target"></span></h1>
-                            <hr class="border-secondary w-25">
-                            <h1>Wins:&nbsp; <span id="wins"> </span></h1>
-                            <hr class="border-secondary w-25">
-                            <h1>Losses:&nbsp; <span id="losses"> </span>
-                            </h1>
-                            <hr class="border-secondary w-25">
-                        </div>
-                    </div>
+        <!-- Top of page -->
+        <div class="jumbotron jumbotron-fluid bg-info">
+            <h1 class="text-center text-bold text-info">Crystal Collector</h1>
+        </div>
+        <div class="accordion w-50 mx-auto" id="accordionExample">
+            <div class="card">
+                <div class="card-header text-center text-dark p-3 mb-2 bg-transparent text-dark" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link text-bold" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h4>Click here for instructions</h4>
+                        </button>
+                    </h2>
                 </div>
 
-                <!-- Break in Page -->
-                <br>
-                <br>
-
-                <!-- Your Score -->
-                <div class="row">
-                    <div class="col text-center text-success">
-
-                        <h1 class="card-title">Your Score:&nbsp; <span id="score"></span></h1>
-
+                <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne"
+                    data-parent="#accordionExample">
+                    <div class="card-body text-info bg-transparent">
+                        <ul>
+                            <h5 class="text-center text-dark">There will be four crystals displayed as buttons on the
+                                page.</h5>
+                            <br>
+                            <li> You will be given a random "Target Number" at the start of the game.</li>
+                            <li> When you clicks on a the gems, it will add a specific amount of points to your total
+                                score. </li>
+                            <ul>
+                                <li>The game will hide the value of these points until you click a crystal.</li>
+                                <li>When one is clicked, it updates your score.</li>
+                            </ul>
+                            <li> To wins you need score matche the target number displayed on the left side of te
+                                screen.</li>
+                            <li>You loses if your score goes above the random number.</li>
+                            <li>The game restarts whenever the player wins or loses.</li>
+                        </ul>
                     </div>
-                </div>
-                <br>
-                <!-- Gem Buttons -->
-
-                <div class="text-center">
-                    <img id="gem1" class="gem0"></button>
-                    <button id="gem2" class="gem0"></button>
-                    <button id="gem3" class="gem0"></button>
-                    <button id="gem4" class="gem0"></button>
                 </div>
             </div>
         </div>
+
+
+        <br><br>
+
+        <!-- Score Board -->
+        <ul class="list-group list-group-horizontal-xl mx-auto">
+            <li class="list-group-item bg-dark text-light">
+                <h1>Target: <span id="target"></span></h1>
+            </li>
+            <li class="list-group-item bg-dark text-primary">
+                <h1>Wins:&nbsp; <span id="wins"> </span></h1>
+            </li>
+            <li class="list-group-item bg-dark text-danger">
+                <h1>Losses:&nbsp; <span id="losses"> </span>
+            </li>
+        </ul>
+
+        <!-- Break in Page -->
+        <br>
+        <br>
+
+        <!-- Your Score -->
+        <div class="row">
+            <div class="col text-center text-muted">
+
+                <h1 class="card-title">Your Score:&nbsp; <span id="score" class="text-light"></span></h1>
+
+            </div>
+        </div>
+
+        <br>
+        <!-- Gem Buttons -->
+        <div class="text-center">
+            <button id="gem1" class="gem0"></button>
+            <button id="gem2" class="gem0"></button>
+            <button id="gem3" class="gem0"></button>
+            <button id="gem4" class="gem0"></button>
+        </div>
     </div>
+    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
