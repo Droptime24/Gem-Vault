@@ -14,42 +14,46 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
-    <div class="card card-fluid bg-custom" style="background-image: url(assets/images/background1.jpeg); width: 100%; height: 100%;background-position: center; background-repeat: no-repeat; background-size: cover;">
+<!-- main container -->
 
-        <!-- Top of page -->
-        <div class="jumbotron-fluid bg-dark">
+<body class="overflow-scroll">
+
+    <!-- Background mage -->
+    <div class="card card-border bg-custom"
+        style="background-image: url(assets/images/background1.jpeg); width: 100%; height: 100%;background-position: center; background-repeat: no-repeat; background-size: cover;">
+
+        <!-- insturctions -->
+        <div class="jumbotrton   bg-dark">
             <h1 class="text-center text-bold text-light">Gem Vault</h1>
             <hr class="border-secondary">
-            <div class="accordion w-50 mx-auto" id="accordionExample">
+            <div class="accordion mx-auto pb-0" id="accordionExample">
                 <div class="card bg-transparent text-dark">
                     <div class=" text-center text-dark" id="headingOne">
-                        <h2 class="mb-0">
+                        <h1>
                             <button class="btn btn-link text-primary" type="button" data-toggle="collapse"
                                 data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 <h4>Click to Read Instructions</h4>
                             </button>
-                        </h2>
+                        </h1>
                     </div>
-
                     <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne"
                         data-parent="#accordionExample">
-                        <div class="card-body text-light bg-transparent text-justify">
-                            <ul>
-                                <h5 class="text-justify text-muted">There will be four gems stones displayed on this
-                                    page </h5>
-                                <br>
-                                <li> You will be given a randomly generated target score at the start of the game.</li>
-                                <li> Clicking on the gems will add a specific amount of points to your total
-                                    score. </li>
-                                <ul>
-                                    <li>The game will hide the value of these points until you click a crystal.</li>
-                                    <li>When one is clicked, it updates your score.</li>
-                                </ul>
-                                <li>To win your score must be the same as the target number displayed.</li>
-                                <li>You loses if your score goes above the random number.</li>
-                                <li>The game restarts whenever the player wins, loses or clicks the reset game button to
-                                    restart.</li>
+                        <div class="list text-dark bg-info">
+                            <ul class="list">
+                                <li class="list-group-item">There are four crystals below. By clicking on a crystal you
+                                    will add a specific amount of points to your
+                                    total score.</li>
+                                <li class="list-group-item">You win the game by matching your total score to the random
+                                    number. You lose the game if your total core goes above the random number.</li>
+                                <li class="list-group-item">The game will hide the value of these points until you click
+                                    a crystal</li>
+                                <li class="list-group-item">When one is clicked, it updates your score.</li>
+                                <li class="list-group-item">You win your score must be the same as the target number
+                                    displayed.</li>
+                                <li class="list-group-item">The value of each crystal is hidden from you until you click
+                                    on it.</li>
+                                <li class="list-group-item">Each time when the game starts, the game will change the
+                                    values of each of the crystals.</li>
                             </ul>
                         </div>
                     </div>
@@ -57,16 +61,10 @@
             </div>
         </div>
 
-        <!-- insturctions -->
-
-
-
+        <!-- Pabge br=ke -->
         <br><br>
 
         <!-- Score Board -->
-        <div class="text-center">
-            
-        </div>
         <br>
         <ul class="list-group list-group-horizontal-xl mx-auto ">
 
@@ -83,14 +81,12 @@
 
         <!-- Break in Page -->
         <br>
-        <br>
 
-        <!-- Your Score -->
+        <!--Score gdq4e  -->
         <div class="row">
             <div class="col text-center text-muted">
-
                 <h1 class="card-title">Score:&nbsp; <span id="score" class="text-light"></span></h1>
-
+                <br><br>
             </div>
         </div>
 
@@ -99,18 +95,17 @@
         <!-- Gem Buttons -->
         <div class="text-center col">
 
-            <input type="image" src="assets/images/gem1.png" id="gem1" class="gem0" alt="Submit" width="150"
-                height="150">
-            <input type="image" src="assets/images/gem2.png" id="gem2" class="gem0" alt="Submit" width="150"
-                height="150">
-            <input type="image" src="assets/images/gem3.png" id="gem3" class="gem0" alt="Submit" width="150"
-                height="150">
-            <input type="image" src="assets/images/gem4.png" id="gem4" class="gem0" alt="Submit" width="150"
-                height="150">
+            <input type="image" src="assets/images/gem1.png" id="gem1" class="gem0" alt="Submit" width="90" height="90">
+            <input type="image" src="assets/images/gem2.png" id="gem2" class="gem0" alt="Submit" width="90" height="90">
+            <input type="image" src="assets/images/gem3.png" id="gem3" class="gem0" alt="Submit" width="90" height="90">
+            <input type="image" src="assets/images/gem4.png" id="gem4" class="gem0" alt="Submit" width="90" height="90">
             <br><br><br>
             <button id="reset" class="btn btn-danger btn-lg" type="reset">Reset Game</button>
+           < sbr><br><br><br><br><br><br>
         </div>
     </div>
+
+
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

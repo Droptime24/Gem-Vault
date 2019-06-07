@@ -17,7 +17,7 @@ $('.gem0').on('click', function () {
 
     score += parseInt($(this).attr("vault"));
     $('#score').html(score);
-    setTimeout(function () { ifScore() })
+    setTimeout(function () { ifScore() });
 
 });
 
